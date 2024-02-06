@@ -232,14 +232,15 @@ header .active{
 #line-header-projects{
     position: absolute;
     right: 100px;
-    bottom: -350px;
+    bottom: -40%;
+    z-index: 1;
 }
 
 /** End Header **/
 
 /** Start Projects **/
 #projects{
-    min-height: 700px;
+    min-height: 900px;
     background-color: #01161A;
 }
 
@@ -262,16 +263,41 @@ header .active{
     bottom: 0;
 }
 
-#projects .container{
-    position: relative;
-}
-
 #projects svg{
     backdrop-filter: blur(4px);
     border-radius: 31px;
     position: absolute;
     min-height: 555.696px;
     padding: 19px;
+}
+
+#projects-carousel{
+    background-image: url("assets/images/favicon.png");
+}
+
+#projects .container {
+    border-radius: 8px;
+    backdrop-filter: blur(4px);
+    position: relative;
+    position: relative;
+    transform: translateY(200px);
+}
+
+#projects .container:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 8px;
+    padding: 1px;
+    pointer-events: none;
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 1) 25%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
 }
 
 #projects .carousel-inner{
@@ -284,6 +310,12 @@ header .active{
     font-family: Inter;
     font-size: 19px;
     font-weight: 600;
+}
+
+@media (max-width: 768px){
+    #projects .carousel-inner p{
+        font-size: 14px;
+    }
 }
 
 #projects .carousel-indicators{
