@@ -48,7 +48,7 @@ header{
 
 header .nav-link{
     color: white;
-    font-family: Inter;
+    font-family: 'Inter';
     font-weight: 500;
     margin: 0 15px;
     font-style: normal;
@@ -186,7 +186,7 @@ header .active{
 
 .paragraph p{
     color: #FFF;
-    font-family: Inter;
+    font-family: 'Inter';
     font-size: 18px;
     font-weight: 700;
     margin: 2px auto;
@@ -275,7 +275,7 @@ header .active{
     background-image: url("assets/images/favicon.png");
 }
 
-#projects .container {
+#projects .p-container {
     border-radius: 8px;
     backdrop-filter: blur(4px);
     position: relative;
@@ -283,7 +283,13 @@ header .active{
     transform: translateY(200px);
 }
 
-#projects .container:before {
+@media (max-width: 576px){
+    #projects .p-container {
+        padding: 0 21px;
+    }
+}
+
+#projects .p-container:before {
     content: "";
     position: absolute;
     inset: 0;
@@ -304,10 +310,18 @@ header .active{
     padding: 100px;
 }
 
+#projects .carousel-inner .carousel-item div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+}
+
 #projects .carousel-inner p{
     color: #FFF;
     text-align: justify;
-    font-family: Inter;
+    font-family: 'Inter';
     font-size: 19px;
     font-weight: 600;
 }
@@ -318,8 +332,22 @@ header .active{
     }
 }
 
+#projects .carousel-inner h1{
+    font-family: 'Inter';
+    font-weight: 900;
+    font-size: 24px;
+    color: #fff;
+}
+
 #projects .carousel-indicators{
     bottom: 45px;
+}
+
+#projects-carousel{
+    min-height: 557px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #projects .carousel-control-prev{
@@ -328,8 +356,15 @@ header .active{
     height: 50px;
     border-radius: 50%;
     top: 50%;
-    transform: translate(-3px, -50%);
+    transform: translate(-24px, -50%);
     opacity: 1;
+}
+
+.carousel-indicators [data-bs-target]{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin: 0 5px;
 }
 
 #projects .carousel-control-next{
@@ -338,7 +373,7 @@ header .active{
     height: 50px;
     border-radius: 50%;
     top: 50%;
-    transform: translate(3px, -50%);
+    transform: translate(25px, -50%);
     opacity: 1;
 }
 
