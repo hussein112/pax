@@ -229,12 +229,6 @@ header .active{
 }
 
 
-#line-header-projects{
-    position: absolute;
-    right: 100px;
-    bottom: -40%;
-    z-index: 1;
-}
 
 /** End Header **/
 
@@ -242,8 +236,39 @@ header .active{
 #projects{
     min-height: 900px;
     background-color: #01161A;
+    position: relative;
 }
 
+@media(max-width: 1200px){
+    #projects{
+        min-height: 1050px;
+    }
+}
+
+@media(max-width: 992px){
+    #projects{
+        min-height: 1300px;
+    }
+}
+
+@media(max-width: 480px){
+    #projects{
+        min-height: 1650px;
+    }
+}
+
+#line-header-projects{
+    position: absolute;
+    right: 100px;
+    top: -20%;
+    z-index: 1;
+}
+
+@media (max-width: 576px){
+    #line-header-projects{
+        right: 50px;
+    }
+}
 
 #projects .bg{
     background-image: url(assets/images/home_slider.png);
@@ -252,6 +277,7 @@ header .active{
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
 }
 
 #projects .bg::after{
@@ -263,16 +289,14 @@ header .active{
     bottom: 0;
 }
 
-#projects svg{
-    backdrop-filter: blur(4px);
-    border-radius: 31px;
-    position: absolute;
-    min-height: 555.696px;
-    padding: 19px;
+#projects-carousel{
+    background-image: url("assets/images/favicon.png");
 }
 
 #projects-carousel{
-    background-image: url("assets/images/favicon.png");
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #projects .p-container {
@@ -307,20 +331,59 @@ header .active{
 }
 
 #projects .carousel-inner{
-    padding: 100px;
+    padding: 100px 50px;
 }
+
+@media(max-width: 768px){
+    #projects .carousel-inner{
+        padding: 100px 25px;
+    }
+}
+
 
 #projects .carousel-inner .carousel-item div{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 500px;
+    padding: 0 18px;
+    min-height: 450px;
+}
+
+@media (max-width: 1200px){
+    #projects .carousel-inner .carousel-item div{
+        min-height: 600px;
+    }
+}
+
+@media (max-width: 992px){
+    #projects .carousel-inner .carousel-item div{
+        min-height: 850px;
+    }
+}
+
+@media (max-width: 576px){
+    #projects .carousel-inner .carousel-item div{
+        min-height: 720px;
+    }
+}
+
+
+@media (max-width: 476px){
+    #projects .carousel-inner .carousel-item div{
+        min-height: 900px;
+    }
+}
+
+@media (max-width: 400px){
+    #projects .carousel-inner .carousel-item div{
+        min-height: 1000px;
+    }
 }
 
 #projects .carousel-inner p{
     color: #FFF;
-    text-align: justify;
+    text-align: center;
     font-family: 'Inter';
     font-size: 19px;
     font-weight: 600;
@@ -343,12 +406,6 @@ header .active{
     bottom: 45px;
 }
 
-#projects-carousel{
-    min-height: 557px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 #projects .carousel-control-prev{
     background: #0D0C0C;
@@ -358,6 +415,12 @@ header .active{
     top: 50%;
     transform: translate(-24px, -50%);
     opacity: 1;
+}
+
+@media (max-width: 576px){
+    #projects .carousel-control-prev{
+        transform: translate(-33px, -50%);
+    }
 }
 
 .carousel-indicators [data-bs-target]{
@@ -377,14 +440,18 @@ header .active{
     opacity: 1;
 }
 
+@media (max-width: 576px){
+    #projects .carousel-control-next{
+        transform: translate(32px, -50%);
+    }
+}
+
 #projects .carousel-control-prev-icon{
     margin-right: 5px
 }
 #projects .carousel-control-next-icon{
     margin-left: 5px
 }
-
-
 
 /** End Projects **/
 
@@ -403,6 +470,7 @@ footer .container{
 footer .top{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .top .description{
@@ -438,17 +506,28 @@ footer .top{
 }
 
 .l-d-s{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.l-d{
     width: 500px;
 }
 
 .social-media{
-    width: 70%;
+    width: 30%;
     padding-bottom: 50px;
     padding-left: 0;
     display: flex;
     justify-content: space-between;
 }
 
+@media (max-width: 768px){
+    .social-media{
+        width: 100%;
+    }
+}
 
 .bottom{
     padding-top: 20px;
@@ -476,5 +555,3 @@ footer .top{
     font-weight: 400;
 }
 /** End Footer **/
-
-
