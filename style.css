@@ -31,6 +31,10 @@ header{
     background-image: url('assets/icons/menu.svg');
 }
 
+.navbar-toggler:focus{
+    box-shadow: none;
+}
+
 .responsive-logo{
     width: 228px;
     display: none;
@@ -70,6 +74,8 @@ header .active{
 
 .custom-container{
     padding-left: 80px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     display: flex;
     position: relative;
     overflow: hidden;
@@ -239,36 +245,14 @@ header .active{
     position: relative;
 }
 
-@media(max-width: 1200px){
-    #projects{
-        min-height: 1050px;
-    }
-}
-
-@media(max-width: 992px){
-    #projects{
-        min-height: 1300px;
-    }
-}
-
-@media(max-width: 480px){
-    #projects{
-        min-height: 1650px;
-    }
-}
-
 #line-header-projects{
     position: absolute;
-    right: 100px;
-    top: -20%;
     z-index: 1;
+    right: 10%;
+    top: -10%;
+    transform: translate(10%, -10%);
 }
 
-@media (max-width: 576px){
-    #line-header-projects{
-        right: 50px;
-    }
-}
 
 #projects .bg{
     background-image: url(assets/images/home_slider.png);
@@ -331,15 +315,8 @@ header .active{
 }
 
 #projects .carousel-inner{
-    padding: 100px 50px;
+    padding: 0 50px;
 }
-
-@media(max-width: 768px){
-    #projects .carousel-inner{
-        padding: 100px 25px;
-    }
-}
-
 
 #projects .carousel-inner .carousel-item div{
     display: flex;
@@ -347,38 +324,6 @@ header .active{
     align-items: center;
     justify-content: center;
     padding: 0 18px;
-    min-height: 450px;
-}
-
-@media (max-width: 1200px){
-    #projects .carousel-inner .carousel-item div{
-        min-height: 600px;
-    }
-}
-
-@media (max-width: 992px){
-    #projects .carousel-inner .carousel-item div{
-        min-height: 850px;
-    }
-}
-
-@media (max-width: 576px){
-    #projects .carousel-inner .carousel-item div{
-        min-height: 720px;
-    }
-}
-
-
-@media (max-width: 476px){
-    #projects .carousel-inner .carousel-item div{
-        min-height: 900px;
-    }
-}
-
-@media (max-width: 400px){
-    #projects .carousel-inner .carousel-item div{
-        min-height: 1000px;
-    }
 }
 
 #projects .carousel-inner p{
@@ -401,11 +346,6 @@ header .active{
     font-size: 24px;
     color: #fff;
 }
-
-#projects .carousel-indicators{
-    bottom: 45px;
-}
-
 
 #projects .carousel-control-prev{
     background: #0D0C0C;
