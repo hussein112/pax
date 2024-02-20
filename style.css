@@ -250,7 +250,6 @@ header .active{
     z-index: 1;
     right: 10%;
     top: -10%;
-    transform: translate(10%, -10%);
 }
 
 
@@ -449,11 +448,20 @@ footer .top{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 .l-d{
     width: 500px;
 }
+
+
+@media (max-width: 576px){
+    .l-d{
+        width: auto;
+    }
+}
+
 
 .social-media{
     width: 30%;
@@ -474,6 +482,19 @@ footer .top{
     border-top: 2px solid #8184A3;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px){
+    .bottom{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .bottom ul{
+        padding: 0;
+    }
 }
 
 .bottom .copy{
