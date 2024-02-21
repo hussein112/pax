@@ -73,9 +73,7 @@ header .active{
 }
 
 .custom-container{
-    padding-left: 80px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 20px 0 20px 80px;
     display: flex;
     position: relative;
     overflow: hidden;
@@ -95,28 +93,13 @@ header .active{
     }
 }
 
-
-@media (max-width: 992px){
-    .custom-container{
-        height: 800px;
-    }
-}
-
-@media (max-width: 667px){
-    .custom-container{
-        height: 1000px;
-    }
-}
-
-@media (max-width: 352px){
-    .custom-container{
-        height: 1450px;
-    }
-}
-
 .custom-container .right,
 .custom-container .left{
     flex-basis: 50%;
+}
+
+.custom-container .left{
+    height: fit-content;
 }
 
 @media (max-width: 992px){
@@ -515,3 +498,152 @@ footer .top{
     font-weight: 400;
 }
 /** End Footer **/
+
+
+/** Start About Us Page **/
+#about{
+    background-color: #01161A;
+}
+
+#about .custom-container{
+    padding-top: 145px;
+    position: relative;
+}
+
+#circle-1-small,
+#circle-3-large {
+    position: absolute;
+    right: 30%;
+}
+ 
+#circle-2-large,
+#circle-4-small {
+    position: absolute;
+    bottom: 10%;
+    right: 14%;
+}
+
+
+@media screen and (max-width: 600px) {
+    #circle-1-small {
+        width: 20px;
+        height: 19px;
+    }
+    #circle-2-large {
+        width: 30px;
+        height: 29px;
+        bottom: 20%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #circle-2-large {
+        bottom: 30%;
+    }
+} 
+
+
+@media (max-width: 576px){
+    #about .custom-container{
+        padding-left: 0 !important;
+    }
+}
+
+#about .custom-container .left{
+    padding-left: 65px;
+}
+
+@media (max-width: 576px){
+    #about .custom-container .left{
+        padding-left: 60px;
+        padding-right: 33px;
+    }  
+}
+
+#who-we-are .right,
+#our-vision .right{
+    background-image: url(assets/images/about_1.svg);
+    display: block;
+    height: 325px;
+    background-repeat: no-repeat;
+    background-position: 100%;
+}
+
+#about h1{
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 40px;
+    color: white;
+    position: relative;
+}
+
+#about h1::after{
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 3px;
+    background-color: white;
+    left: -10%;
+    top: -9%;
+    transform: rotate(137deg);
+    border-radius: 10px;
+}
+
+#about p{
+    font-family: "Inter";
+    font-weight: 500;
+    font-size: 16px;
+    color: white;
+    margin-top: 35px;
+}
+
+@media(min-width: 768px){
+    #about p{
+        width: 500px;
+    }
+}
+
+
+
+.custom-container-reversed{
+    padding: 20px 80px 20px 0;
+}
+
+
+@media (max-width: 992px){
+    .custom-container-reversed .right{
+        position: absolute;
+        z-index: 2;
+    }
+}
+
+.custom-container-reversed .right{
+    padding-left: 65px;
+}
+
+@media(max-width: 576px){
+    .custom-container-reversed .right{
+        padding-left: 60px;
+        padding-right: 33px;
+    }
+}
+
+
+#our-mission .left{
+    background-image: url(assets/images/about_2.svg);
+    display: block;
+    height: 413px;
+    background-repeat: no-repeat;
+    background-position: 100%;
+    width: 80%;
+}
+
+#our-values .left{
+    background-image: url(assets/images/about_3.svg);
+    display: block;
+    height: 722px;
+    background-repeat: no-repeat;
+    background-position: 100%;
+    width: 50%;
+}
+/** End About Us Page **/
