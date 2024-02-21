@@ -240,7 +240,6 @@ header .active{
 
 /** Start Projects **/
 #projects{
-    min-height: 900px;
     background-color: #01161A;
     position: relative;
 }
