@@ -647,3 +647,104 @@ footer .top{
     width: 50%;
 }
 /** End About Us Page **/
+
+
+/** Start Projects Page **/
+#projects-header{
+    height: 300px;
+}
+
+#projects-page{
+    background-color: #001B20;
+}
+
+.projects{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    transform: translateY(-120px);
+}
+
+
+.projects .project{
+    flex: 1;
+    background-color: #353535;
+    padding: 30px;
+    width: 300px;
+    min-height: 300px;
+}
+
+.projects .project img{
+    width: 45px;
+    height: 49px;
+}
+
+.project h2,
+.project p{
+    color: white;
+    font-family: "Inter";
+}
+
+.project p{
+    margin-top: 25px;
+    font-size: 18px;
+}
+
+.projects-categories h2{
+    text-align: center;
+    color: white;
+    margin-bottom: 50px;
+}
+
+.projects-categories .categories{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.project-category{
+    width: fit-content;
+    padding: 15px 30px;
+    border-radius: 50px;
+    background: linear-gradient(135.21deg, #090909 -49.36%, #737373 130.34%);
+    border: 1px solid white;
+    color: white;
+    font-family: 'Inter';
+    text-wrap: nowrap;
+    cursor: pointer;
+}
+
+.project-details{
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.project-details .project{
+    background-color: #353535;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.project-details .project p{
+    margin-bottom: 50px;
+}
+
+
+.project-details .project a{
+    background-color: #1E8395;
+    color: white;
+    font-family: 'Inter';
+    font-weight: 500;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+/** End Projects Page **/
