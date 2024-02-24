@@ -15,6 +15,33 @@ a{
     text-decoration: none;
 }
 
+.learn-more{
+    background-color: #1E8395;
+    color: white;
+    font-family: 'Inter';
+    font-weight: 500;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 15px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 10px;
+}
+
+.learn-more span{
+    font-size: 18px;
+}
+
+.learn-more img{
+    width: 25px;
+    height: 25px;
+}
+
+.learn-more:hover{
+    color: white;
+}
+
 /** End Global **/
 
 /** Start Header **/
@@ -658,13 +685,19 @@ footer .top{
     background-color: #001B20;
 }
 
+.projects-container .text{
+    transform: translateY(-120px);
+    color: white;
+    font-family: 'Inter';
+}
+
 .projects{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
-    transform: translateY(-120px);
+    transform: translateY(-80px);
 }
 
 
@@ -674,6 +707,7 @@ footer .top{
     padding: 30px;
     width: 300px;
     min-height: 300px;
+    border-radius: 5px;
 }
 
 .projects .project img{
@@ -734,17 +768,6 @@ footer .top{
 
 .project-details .project p{
     margin-bottom: 50px;
-}
-
-
-.project-details .project a{
-    background-color: #1E8395;
-    color: white;
-    font-family: 'Inter';
-    font-weight: 500;
-    border: 1px solid white;
-    border-radius: 5px;
-    padding: 15px;
 }
 
 /** End Projects Page **/
