@@ -27,6 +27,7 @@ a{
     align-items: flex-end;
     justify-content: center;
     gap: 10px;
+    width: fit-content;
 }
 
 .learn-more span{
@@ -686,7 +687,7 @@ footer .top{
 }
 
 .projects-container .text{
-    transform: translateY(-120px);
+    transform: translateY(-68px);
     color: white;
     font-family: 'Inter';
 }
